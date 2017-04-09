@@ -1,4 +1,5 @@
 body {
+font-family: 'Raleway', sans-serif;
 text-align: center;
 }
 .navbar {
@@ -14,6 +15,7 @@ text-align: center;
   float: left;
 }
 .navbar-brand h3 {
+  color: black;
   float: left;
   margin-top: 11px;
 }
@@ -71,4 +73,17 @@ footer {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
   overflow: hidden;
+}
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+
+  .navbar-btns {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
 }
