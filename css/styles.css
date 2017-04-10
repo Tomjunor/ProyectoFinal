@@ -1,5 +1,5 @@
 body {
-background-color: grey;
+font-family: 'Raleway', sans-serif;
 text-align: center;
 }
 .navbar {
@@ -15,29 +15,30 @@ text-align: center;
   float: left;
 }
 .navbar-brand h3 {
+  color: black;
   float: left;
   margin-top: 11px;
 }
+.search-btn {
+  float: left;
+}
 .navbar-btn {
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 .intro {
   width: 100%;
-  height: 300px;
-  background-color: lightblue;
+  overflow: hidden;
 }
 .intro h1 {
-  padding-top: 130px;
-  margin: 0;
+text-align: left;
 }
 .categoria {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   float: left;
   width: 100%;
   height: 150px;
-  background-color: lightgreen;
+  background-color: #f8f8f8;
 }
 .cate-info {
   float: left;
@@ -50,6 +51,9 @@ text-align: center;
 .cate-info p {
   margin-left: 20px;
 }
+.cate-tops {
+  overflow: scroll;
+}
 .servicio {
   float: left;
   height: 130px;
@@ -59,6 +63,8 @@ text-align: center;
   margin-right: 20px;
   margin-bottom: 10px;
   background-color: rgba(200, 0, 0, 0.5);
+  border-color: #e7e7e7;
+  border-style: solid;
 }
 .formregistro {
   background-color: whithe;
@@ -68,6 +74,20 @@ text-align: center;
 footer {
   width: 100%;
   height: 50px;
-  background-color: white;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
   overflow: hidden;
+}
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+
+  .navbar-btns {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
 }
