@@ -52,7 +52,7 @@ text-align: left;
   margin-left: 20px;
 }
 .cate-tops {
-  overflow: scroll;
+  overflow: hidden;
 }
 .servicio {
   float: left;
