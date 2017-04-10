@@ -60,6 +60,10 @@ text-align: center;
   margin-bottom: 10px;
   background-color: rgba(200, 0, 0, 0.5);
 }
+.formregistro {
+  background-color: whithe;
+  text-align: inherit;
+}
 
 footer {
   width: 100%;
