@@ -15,7 +15,7 @@
 
     if (strlen(trim($datos["username"]) === "")) {
       $errores["username"] = "No ingreso ningun Username.";
-    } else if (strlen(trim($datos["username"]) >= 8)) {
+    } else if (strlen(trim($datos["username"]) <= 8)) {
       $errores["usernameLen"] = "Username ingresado menor a 8 caracteres";
     }
 
@@ -24,7 +24,7 @@
 
     if (strlen(trim($datos["password"]) === "")) {
       $errores["password"] = "No ingreso ninguna Contraseña.";
-    } else if (strlen(trim($datos["password"]) >= 8)) {
+    } else if ($pass <= 8) {
       $errores["passwordLen"] = "La Contraseña ingresada en menor a 8 caracteres.";
     } else if ($pass != $passConf) {
       $errores["passwordConfir"] = "La Contraseña y la Conifirmacion son distintas.";
