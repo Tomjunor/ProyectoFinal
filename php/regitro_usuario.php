@@ -8,7 +8,7 @@
   $contrasenaDefault= '';
   $archivo = __DIR__.'/data.txt';
 
-//var_dump($_POST);
+
 
 //Errores de la valdacion
   if ($_POST) {
@@ -17,19 +17,18 @@
     if (!isset($errores["nombre"])) {
       $nombreDefault = $_POST["nombre"];
     }
-    if (!isset($errores["email"])) {
-      $emailDefault = $_POST["email"];
+    if (!isset($errores["mail"])) {
+      $emailDefault = $_POST["mail"];
     }
     if (!isset($errores["username"])) {
       $usernameDefault = $_POST["username"];
     }
-
     if (count($errores) == 0) {
-      $campos = ['nombre', 'email'];
-      foreach ( $campos as $k ) {
-        $datosUsuario[$k] = $_POST[$k];
-      }
-      $texto = json_encode($_POST);
+
+      $_SESSION ['user'] = $_POST ['mail'];
+      $usuarioNuevo = crearUsuario($_POST);
+
+      $texto = json_encode($usuarioNuevo);
       //var_dump($texto);
 
       echo "Escribiendo en $archivo<br/>";
@@ -39,12 +38,9 @@
         echo "No!";
       }
 
-
-
       header("location: ../index.html");
       exit;
-    }
-
+}
   }
 
   $paises = [
@@ -71,9 +67,12 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
      <!-- CSS -->
      <link rel="stylesheet" href="../css/styles.css">
+     <link rel="stylesheet" href="../css/registrocss.css">
 
      <!-- Fonts -->
      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -120,6 +119,7 @@
        </div>
      </nav>
 
+      <!-- Fin del Nav, Comienzo del Registro -->
 
      <?php if ($_POST && count($errores) > 0) { ?>
    		<ul>
@@ -130,6 +130,50 @@
    			<?php } ?>
    		</ul>
    	<?php } ?>
+
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/registrocss.css">
+  -->
+
+    <div class="testbox">
+      <h1>Registro</h1>
+
+      <form action="/">
+          <hr>
+        <div class="accounttype">
+          <input type="radio" value="None" id="radioOne" name="account" checked/>
+          <label for="radioOne" class="radio" chec>Personal</label>
+          <input type="radio" value="None" id="radioTwo" name="account" />
+          <label for="radioTwo" class="radio">Compania</label>
+        </div>
+      <hr>
+      <label id="icon" for="name"><i class="icon-envelope "></i></label>
+      <input type="text" name="name" id="name" placeholder="Email" required/>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name="name" id="name" placeholder="Nombre Completo" required/>
+      <label id="icon" for="name"><i class="icon-shield"></i></label>
+      <input type="password" name="name" id="name" placeholder="Password" required/>
+      <div class="genero">
+        <input type="radio" value="None" id="male" name="genero" checked/>
+        <label for="male" class="radio" chec>Hombre</label>
+        <input type="radio" value="None" id="female" name="genero" />
+        <label for="female" class="radio">Mujer</label>
+       </div>
+       <p>Clickeando Registrarse, Aceptas nuestros <a href="#">terminos y condiciones</a>.</p>
+       <a href="#" class="button">Registrate</a>
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- RegisterBox
      <div class="register-box" id='fg_membersite' style=''>
          <form id='register' action='' method='post'>
              <fieldset class="box" >
@@ -141,8 +185,13 @@
                  </div>
 
                  <div class='container'>
-                     <label for='email' >Email:</label><br/>
-                     <input type='text' name='email' id='email' value='<?=$emailDefault?>' maxlength="50" /><br/>
+                     <label for='avatar' >Avatar: </label><br/>
+                     <input type='text' name='avatar' id='avatar' value= maxlength="50" /><br/>
+                 </div>
+
+                 <div class='container'>
+                     <label for='mail' >Mail:</label><br/>
+                     <input type='text' name='mail' id='mail' value='<?=$emailDefault?>' maxlength="50" /><br/>
                  </div>
 
                  <div class='container'>
@@ -182,5 +231,7 @@
              </fieldset>
          </form>
        </div>
+     -->
+
    </body>
  </html>

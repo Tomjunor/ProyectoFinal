@@ -1,0 +1,26 @@
+body {
+font-family: 'Raleway', sans-serif;
+text-align: center;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-brand {
+  overflow: hidden;
+  padding: 0;
+}
+.navbar-brand img{
+  padding: 5%;
+  height: 100%;
+  float: left;
+}
+.navbar-brand h3 {
+  color: black;
+  float: left;
+  margin-top: 11px;
+}
+.search-btn {
+  float: left;
+}
+.navbar-btn {
+}

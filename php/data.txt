@@ -1,0 +1,3 @@
+{"nombre":"Tomas Junor","username":"tomasjunor@gmail.com","mail":"tomasjunor@gmail.com","password":"$2y$10$5B60505Erimux5LtL.3FDOrSN7eyjcvDbgIyHYpyCA0JHWG6GDvmW","pais":"AR","id":1}
+{"nombre":"Tomas Junor","username":"tomasjunor@gmail.com","mail":"tomasjunor@gmail.com","password":"$2y$10$9YejdrdUqA6OG63DHU0AD.ng\/SadJ7mGt6\/XZLXPnlwgXnPCWGieO","pais":"AR","id":1}
+{"nombre":"Tomas alex","username":"tomasjunor@gmail.com","mail":"tomasjunor@gmail.com","password":"$2y$10$bA0e3ENwZIxGPZnmu37t8.eYd3t2E7cyFTBo4\/GJcKQVv7IXbEenW","pais":"AR","id":1}

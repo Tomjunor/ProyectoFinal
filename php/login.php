@@ -1,4 +1,19 @@
+<?php
+session_start();
+include 'functions.php';
+if ($_POST) {
+  $errores = validarLogin($_POST);
+
+  if (!count($errores)) {
+    $_SESSION ['user'] = $_POST['mail'];
+    header("location: ../index.html");
+  }
+
+}
+ ?>
+
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,7 +24,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/loginstyle.css">
 
   </head>
   <body>
@@ -17,7 +32,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="">
-            <img alt="Brand" src="img/logo.png">
+            <img alt="Brand" src="../img/logo.png">
             <h3>ServiWEB</h3>
           </a>
         </div>
@@ -30,7 +45,7 @@
            </button>
          </form>
          <div class="navbar-right navbar-btns">
-           <button type="button" class="btn btn-default navbar-btn">Ingresa</button>
+           <button action="header("location: ../index.html")" type="button" class="btn btn-default navbar-btn">Ingresa</button>
            <button type="button" class="btn btn-default navbar-btn">Registrate</button>
            <button type="button" class="btn btn-default navbar-btn">Publica</button>
            <button type="button" class="btn btn-default navbar-btn">Contrata</button>
@@ -39,26 +54,31 @@
     </nav>
 
     <section>
-      <div class="Registerbox">
-        <form class="formregistro" action="index.html" method="post">
-          Nombre Completo:
-          <input type="text" name="firstname" value=""><br>
-          Usuario:
-          <input type="text" name="lastname" value=""><br>
-          Mail:
-          <input type="text" name="inbox" value=""><br>
-          Dirección:
-          <input type="text" name="adress" value=""><br>
-          Localidad:
-          <input type="text" name="barrio" value=""><br>
-          Provincia:
-          <input type="text" name="provincia" value=""><br>
-          Contraseña:
-          <input type="text" name="pw" value=""><br>
-          Repetir contraseña:
-          <input type="text" name="pw2" value=""><br>
-
-        </form>
-
+      <h1>Login</h1>
+      <?php if ($_POST && count($errores) > 0) { ?>
+    		<ul>
+    			<?php foreach ($errores as $error) { ?>
+    				<li>
+    					<?=$error?>
+    				</li>
+    			<?php } ?>
+    		</ul>
+    	<?php } ?>
+      <form action="" method="post">
+        <div class="">
+          <label for="">Mail</label>
+          <input type="text" name="mail" value="">
+        </div>
+        <div class="">
+          <label for="">Contraseña</label>
+          <input type="password" name="password" value="">
+        </div>
+        <div>
+          <input type="checkbox" name="recordar_usu"> Recordar usuario
+        </div>
+        <div class="">
+          <input type="submit" name="" value="Loguearse">
+        </div>
+      </form>
       </div>
     </section>

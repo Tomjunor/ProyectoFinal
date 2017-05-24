@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
 
   </head>
   <body>
@@ -59,7 +61,7 @@
     <h1>¿Que tipo de servicio buscas?</h1>
     <div class="listacat">
       <div class="cat">
-        <h3>Servicios para el hogar: </h3>
+        <h3>Para el hogar: </h3>
             <ul>
               <li><a href="#">Plomeria</a></li>
               <li><a href="#">Electrisista</a></li>
@@ -73,7 +75,7 @@
             </ul>
       </div>
       <div class="cat">
-          <h3>Servicios legales: </h3>
+          <h3>Legales: </h3>
             <ul>
               <li><a href="#">Abogados</a></li>
               <li><a href="#">Contadurias</a></li>
@@ -83,53 +85,64 @@
           </div>
         <div class="catlarga">
             <h3>Clases:</h3>
-            <ul>
-              <li class="titulo">Instrumentacion Musical:</li>
-                <ul>
-                  <li><button type="button" name="button">Guitarra</button></li>
-                  <li><button type="button" name="button">Piano</button></li>
-                  <li><button type="button" name="button">Bateria</button></li>
-                  <li><button type="button" name="button">Canto</button></li>
-                  <li><a href="#">Flauta</a></li>
-                  <li><a href="#">Saxo</a></li>
-                  <li><a href="#">Mixer</a></li>
-                  <li><a href="#">Composicion Musical</a></li>
-                  <li><a href="#">Lectura de partituras</a></li>
-                </ul>
-              <li class="titulo">Idiomas:</li>
-                <ul>
-                  <li><button type="button" name="button">Frances</button></li>
-                  <li><a href="#">Ingles</a></li>
-                  <li><a href="#">Aleman</a></li>
-                  <li><a href="#">Español</a></li>
-                  <li><a href="#">Ruso</a></li>
-                  <li><a href="#">Cantones</a></li>
-                  <li><a href="#">Catalan</a></li>
-                  <li><a href="#">Latin</a></li>
-                  <li><a href="#">Japones</a></li>
-                  <li><a href="#">Arabe</a></li>
-                </ul>
-              <li class="titulo">Educación:</li>
-                <ul>
-                  <li><a href="#">Historia</a></li>
-                  <li><a href="#">Matematica</a></li>
-                  <li><a href="#">Lengua y Literatura</a></li>
-                  <li><a href="#">Fisica</a></li>
-                  <li><a href="#">Quimica</a></li>
-                  <li><a href="#">Biologia</a></li>
-                  <li><a href="#">Religion</a></li>
-                </ul>
-              <li class="titulo">Arte</li>
-                <ul>
-                  <li><a href="#">Escultura</a></li>
-                  <li><a href="#">Pintura</a></li>
-                  <li><a href="#">Barro</a></li>
-                  <li><a href="#">Tiza</a></li>
-                  <li><a href="#">Lapiz</a></li>
-                  <li><a href="#">Oleo</a></li>
-                  <li><a href="#">Madera</a></li>
-                </ul>
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  This dropdown's menu is right-aligned
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <button class="dropdown-item" type="button">Action</button>
+                  <button class="dropdown-item" type="button">Another action</button>
+                  <button class="dropdown-item" type="button">Something else here</button>
+                </div>
               </div>
+
+              <ul>
+                <li class="titulo">Instrumentacion Musical:</li>
+                  <ul>
+                    <li><button type="submit" name="button">Guitarra</button></li>
+                    <li><button type="button" name="button">Piano</button></li>
+                    <li><button type="button" name="button">Bateria</button></li>
+                    <li><button type="button" name="button">Canto</button></li>
+                    <li><a href="#">Flauta</a></li>
+                    <li><a href="#">Saxo</a></li>
+                    <li><a href="#">Mixer</a></li>
+                    <li><a href="#">Composicion Musical</a></li>
+                    <li><a href="#">Lectura de partituras</a></li>
+                  </ul>
+                <li class="titulo">Idiomas:</li>
+                  <ul>
+                    <li><button type="button" name="button">Frances</button></li>
+                    <li><a href="#">Ingles</a></li>
+                    <li><a href="#">Aleman</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Ruso</a></li>
+                    <li><a href="#">Cantones</a></li>
+                    <li><a href="#">Catalan</a></li>
+                    <li><a href="#">Latin</a></li>
+                    <li><a href="#">Japones</a></li>
+                    <li><a href="#">Arabe</a></li>
+                  </ul>
+                <li class="titulo">Educación:</li>
+                  <ul>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Matematica</a></li>
+                    <li><a href="#">Lengua y Literatura</a></li>
+                    <li><a href="#">Fisica</a></li>
+                    <li><a href="#">Quimica</a></li>
+                    <li><a href="#">Biologia</a></li>
+                    <li><a href="#">Religion</a></li>
+                  </ul>
+                <li class="titulo">Arte</li>
+                  <ul>
+                    <li><a href="#">Escultura</a></li>
+                    <li><a href="#">Pintura</a></li>
+                    <li><a href="#">Barro</a></li>
+                    <li><a href="#">Tiza</a></li>
+                    <li><a href="#">Lapiz</a></li>
+                    <li><a href="#">Oleo</a></li>
+                    <li><a href="#">Madera</a></li>
+                  </ul>
+                </div>
               <div class="cat">
                 <h3>Eventos: </h3>
                   <ul>
@@ -181,7 +194,5 @@
              <li class="lifo"><a href="#">Llamanos</a></li>
            </ul>
          </footer>
-
-
-
 </body>
+</html>
